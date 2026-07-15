@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Título da apresentação</title>
+<style>
+  :root{
+    --bg:#0b0f1a; --ink:#f4f2ec; --muted:#9aa4b2; --accent:#7cf0d0;
+    /* Gradients da marca Slidum — derivados do símbolo (a gema-tela). Tudo inline:
+       o deck continua 100% self-contained. Aplique via `background:` (palco-aceso
+       carrega uma camada de cor por baixo do glow). */
+    --gradient-faceta:linear-gradient(180deg,#3B57E8,#2742D6 45%,#14226E);
+    --gradient-anel:linear-gradient(135deg,#3550DD,#2742D6 38%,#1F35B0 70%,#16267E);
+    --gradient-palco-aceso:radial-gradient(58% 58% at 31% 31%,rgba(237,180,39,.32),rgba(237,180,39,.05) 45%,transparent 70%),#0C0D0E;
+    --gradient-profundidade:linear-gradient(180deg,#0C0D0E,#101C56 70%,#14226E);
+    --gradient-mesa-de-luz:radial-gradient(120% 90% at 50% 0%,#FFFFFF,#F4F5F2);
+  }
+  *{margin:0;box-sizing:border-box}
+  html,body{height:100%}
+  body{background:var(--bg);color:var(--ink);
+       font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  /* Slides VISÍVEIS por padrão: o Slidum toca em modo nativo alternando o display.
+     Não use uma classe .active para mostrar/esconder — deixe o player controlar. */
+  .slide{
+    height:100vh; width:100%;
+    display:flex; flex-direction:column; justify-content:center;
+    padding:8vmin 10vmin; gap:2.4vmin;
+  }
+  .eyebrow{font-family:ui-monospace,"SF Mono",Menlo,monospace;
+           font-size:clamp(11px,1.4vw,15px); letter-spacing:.16em;
+           text-transform:uppercase; color:var(--accent)}
+  h1{font-size:clamp(34px,7vw,86px); line-height:1.04; font-weight:800; letter-spacing:-.02em}
+  h2{font-size:clamp(26px,5vw,60px); line-height:1.08; font-weight:700; letter-spacing:-.01em}
+  p{font-size:clamp(16px,2.2vw,26px); line-height:1.5; color:var(--muted); max-width:32ch}
+  ul{font-size:clamp(16px,2.2vw,24px); line-height:1.7; color:var(--ink); list-style:none; display:grid; gap:1.2vmin}
+  li::before{content:"—  "; color:var(--accent)}
+  .num{position:absolute; right:6vmin; bottom:6vmin;
+       font-family:ui-monospace,monospace; font-size:clamp(11px,1.3vw,14px); color:var(--muted)}
+  .slide{position:relative}
+  /* Fundos prontos com os gradients da marca — no <section class="slide">. Parcimônia:
+     um gradiente por deck, na abertura OU no fechamento; slides de conteúdo continuam
+     chapados. Nos escuros, texto claro funciona; .bg-mesa-de-luz é o único claro e já
+     troca a tinta para escura (o accent pode pedir ajuste). */
+  .bg-faceta{background:var(--gradient-faceta)}
+  .bg-anel{background:var(--gradient-anel)}
+  .bg-palco-aceso{background:var(--gradient-palco-aceso)}
+  .bg-profundidade{background:var(--gradient-profundidade)}
+  .bg-mesa-de-luz{background:var(--gradient-mesa-de-luz); --ink:#191B1C; --muted:#65696D; color:var(--ink)}
+</style>
+</head>
+<body>
+  <section class="slide">
+    <p class="eyebrow">Relatório · 2026</p>
+    <h1>Título da<br>apresentação</h1>
+    <p>Um subtítulo curto que situa a audiência no que ela está prestes a ver.</p>
+    <span class="num">01</span>
+  </section>
+
+  <section class="slide">
+    <p class="eyebrow">Contexto</p>
+    <h2>Uma ideia por slide</h2>
+    <p>Frases curtas, tipografia grande. O palco é para a mensagem, não para o parágrafo.</p>
+    <span class="num">02</span>
+  </section>
+
+  <section class="slide">
+    <p class="eyebrow">Argumento</p>
+    <h2>Três pontos que sustentam a tese</h2>
+    <ul>
+      <li>O primeiro ponto, dito de forma direta.</li>
+      <li>O segundo, com um dado que ancora.</li>
+      <li>O terceiro, que abre para a conclusão.</li>
+    </ul>
+    <span class="num">03</span>
+  </section>
+
+  <section class="slide">
+    <p class="eyebrow">Fechamento</p>
+    <h1>A transformação<br>que você propõe</h1>
+    <p>Termine no que muda para a audiência — não em "obrigado".</p>
+    <span class="num">04</span>
+  </section>
+</body>
+</html>
