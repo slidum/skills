@@ -1,0 +1,8 @@
+{
+  "name": "slidum-deck",
+  "version": "1.0.1",
+  "description": "Generate single-file HTML presentations that play natively on Slidum (slidum.com) — and fix decks flagged as \"Navigates on its own\".",
+  "author": { "name": "Slidum" },
+  "homepage": "https://slidum.com/skill",
+  "license": "MIT"
+}
