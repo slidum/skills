@@ -1,0 +1,16 @@
+{
+  "$schema": "https://code.claude.com/schemas/marketplace.schema.json",
+  "name": "slidum",
+  "owner": { "name": "Slidum", "email": "sou@oand.re" },
+  "description": "Skills do Slidum — gerar e consertar apresentações HTML que tocam nativamente no Slidum (slidum.com).",
+  "plugins": [
+    {
+      "name": "slidum-deck",
+      "source": "./",
+      "description": "Gera apresentações HTML self-contained que tocam nativamente no Slidum (slidum.com) — e conserta decks marcados como \"Navega sozinha\".",
+      "version": "1.0.1",
+      "homepage": "https://slidum.com/skill",
+      "license": "MIT"
+    }
+  ]
+}
